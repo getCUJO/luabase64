@@ -6,7 +6,9 @@
 * This code is hereby placed in the public domain.
 */
 
+#ifndef _KERNEL
 #include <string.h>
+#endif
 
 #include "lua.h"
 #include "lauxlib.h"
