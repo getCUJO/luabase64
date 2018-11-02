@@ -119,3 +119,20 @@ LUALIB_API int luaopen_base64(lua_State *L)
  lua_settable(L,-3);
  return 1;
 }
+
+#if defined(_KERNEL) && defined(__linux__)
+#include <linux/module.h>
+
+static int __init modinit(void)
+{
+ return 0;
+}
+
+static void __exit modexit(void)
+{
+}
+
+module_init(modinit);
+module_exit(modexit);
+EXPORT_SYMBOL(luaopen_base64);
+#endif
