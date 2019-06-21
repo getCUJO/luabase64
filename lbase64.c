@@ -152,5 +152,6 @@ static void __exit modexit(void)
 module_init(modinit);
 module_exit(modexit);
 EXPORT_SYMBOL(luaopen_base64);
+MODULE_AUTHOR("CUJO LLC <opensource@cujo.com>");
 MODULE_LICENSE("Dual MIT/GPL");
 #endif
